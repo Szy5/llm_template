@@ -1,0 +1,20 @@
+BASIC_MODEL:
+  base_url: "https://ark.cn-beijing.volces.com/api/v3"
+  model: "doubao-1.5-pro-32k-250115"
+  api_key: 4ceb330a-10bc-4c7a-b729-0bac36c52c25
+  # verify_ssl: true
+  # max_retries: 3
+  # platform: "google_aistudio"
+  # platform: "google_aistudio"
+  # token_limit: 100000
+REASONING_MODEL:
+
+VISION_MODEL:
+
+Code_Model:
+
+# 搜索引擎配置
+SEARCH_ENGINE:
+  include_raw_content: True
+  include_images: True
+  include_image_descriptions: True
