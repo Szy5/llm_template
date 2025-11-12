@@ -7,11 +7,22 @@ BASIC_MODEL:
   # platform: "google_aistudio"
   # platform: "google_aistudio"
   # token_limit: 100000
+
 REASONING_MODEL:
 
 VISION_MODEL:
 
-Code_Model:
+REACT_FASTCHAT_MODEL:
+  base_url: "http://localhost:8000/v1"
+  model: "CodeQwen15-7B-Chat"
+  api_key: empty
+  temperature: 0.9
+  top_p: 0.9
+  max_tokens: 8192
+  stop: ["\n"]
+
+  # verify_ssl: True
+  # max_retries: 3
 
 # 搜索引擎配置
 SEARCH_ENGINE:

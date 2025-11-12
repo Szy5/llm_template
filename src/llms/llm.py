@@ -19,6 +19,17 @@ from src.llms.providers.dashscope import ChatDashscope
 def _get_config_file_path() -> str:
   return str((Path(__file__).parent.parent.parent/"config.yaml").resolve())
 
+def _get_llm_type_config_keys() -> dict[str, str]:
+    """获得LLM类型与配置文件中的键的映射"""
+
+    return {
+        "reasoning": "REASONING_MODEL",
+        "basic": "BASIC_MODEL",
+        "vision": "VISION_MODEL",
+        "code": "CODE_MODEL",
+        "react_fastchat": "REACT_FASTCHAT_MODEL",
+    }
+
 
 _llm_cache: dict[LLMType, BaseChatModel] = {}
 
@@ -53,15 +64,7 @@ def get_llm_token_limit_by_type(llm_type: str) -> int:
     return llm_max_token
 
 
-def _get_llm_type_config_keys() -> dict[str, str]:
-    """获得LLM类型与配置文件中的键的映射"""
 
-    return {
-        "reasoning": "REASONING_MODEL",
-        "basic": "BASIC_MODEL",
-        "vision": "VISION_MODEL",
-        "code": "CODE_MODEL",
-    }
 
 
 
